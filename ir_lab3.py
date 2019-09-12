@@ -38,7 +38,7 @@ def idf_matrix(corpus):
     for i in range(len(word_occurence_list)):
         for j in range(len(corpus)):
             if matrix[i][j]!=0:
-                matrix[i][j] *= log(word_occurence_list[i]/matrix[i][j],2)
+                matrix[i][j] *= log(word_occurence_list[i]/len(corpus),2)
                 
     return matrix
 if __name__ == "__main__":
